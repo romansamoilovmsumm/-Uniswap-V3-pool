@@ -1545,7 +1545,7 @@ if not df.empty:
     variance = df['Log_Returns'].var()
 
     # Set the number of trajectories
-    num_trajectories = 1000
+    num_trajectories = 300
 
     # Create a function to generate a trajectory
     def generate_trajectory(num_steps, initial_price, mu, sigma):
@@ -1586,22 +1586,22 @@ else:
 # In[ ]:
 
 
+datetime_values = trajectories['datetime'].to_numpy()
+num_trajectories = 30  # replace with the actual number of trajectories
+
 # Create a plot for each trajectory
-for i in range(min(num_trajectories,30)):
+for i in range(min(num_trajectories, 30)):
     column_name = f'Trajectory_{i + 1}'
-    plt.plot(trajectories['datetime'], trajectories[column_name], label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
+    plt.plot(datetime_values, trajectories[column_name].to_numpy(), label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
 
 constant_trajectory = [initial_price] * num_steps
-plt.plot(trajectories['datetime'], constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
-
+plt.plot(datetime_values, constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
 
 # Set labels and title
 plt.xlabel('Datetime')
 plt.ylabel('Price')
 plt.title(f'Price Trajectories, mu = {mu:.2e}, sigma = {sigma:.2e}')
 
-plt.xticks([])
-# Show a legend
 
 # Display the plot
 plt.show()
@@ -1707,7 +1707,7 @@ if not df.empty:
     variance = df['Log_Returns'].var()
 
     # Set the number of trajectories
-    num_trajectories = 1000
+    num_trajectories = 300
 
     # Create a function to generate a trajectory
     def generate_trajectory(num_steps, initial_price, mu, sigma):
@@ -1750,26 +1750,25 @@ else:
 # In[ ]:
 
 
+datetime_values = trajectories['datetime'].to_numpy()
+num_trajectories = 30  # replace with the actual number of trajectories
+
 # Create a plot for each trajectory
-for i in range(min(num_trajectories,30)):
+for i in range(min(num_trajectories, 30)):
     column_name = f'Trajectory_{i + 1}'
-    plt.plot(trajectories['datetime'], trajectories[column_name], label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
+    plt.plot(datetime_values, trajectories[column_name].to_numpy(), label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
 
 constant_trajectory = [initial_price] * num_steps
-plt.plot(trajectories['datetime'], constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
-
+plt.plot(datetime_values, constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
 
 # Set labels and title
 plt.xlabel('Datetime')
 plt.ylabel('Price')
 plt.title(f'Price Trajectories, mu = {mu:.2e}, sigma = {sigma:.2e}')
 
-plt.xticks([])
-# Show a legend
 
 # Display the plot
 plt.show()
-
 
 # In[ ]:
 
@@ -1904,7 +1903,7 @@ if not df.empty:
     variance = df['Log_Returns'].var()
 
     # Set the number of trajectories
-    num_trajectories = 1000
+    num_trajectories = 300
 
     # Create a function to generate a trajectory
     def generate_trajectory(num_steps, initial_price, mu, sigma):
@@ -1944,27 +1943,25 @@ else:
 
 # In[ ]:
 
+datetime_values = trajectories['datetime'].to_numpy()
+num_trajectories = 30  # replace with the actual number of trajectories
 
 # Create a plot for each trajectory
-for i in range(min(num_trajectories,30)):
+for i in range(min(num_trajectories, 30)):
     column_name = f'Trajectory_{i + 1}'
-    plt.plot(trajectories['datetime'], trajectories[column_name], label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
+    plt.plot(datetime_values, trajectories[column_name].to_numpy(), label=f'Trajectory {i + 1}', color='blue', linewidth=1, alpha=0.5)
 
 constant_trajectory = [initial_price] * num_steps
-plt.plot(trajectories['datetime'], constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
-
+plt.plot(datetime_values, constant_trajectory, label='Constant Trajectory', color='red', linestyle='--', linewidth=1)
 
 # Set labels and title
 plt.xlabel('Datetime')
 plt.ylabel('Price')
 plt.title(f'Price Trajectories, mu = {mu:.2e}, sigma = {sigma:.2e}')
 
-plt.xticks([])
-# Show a legend
 
 # Display the plot
 plt.show()
-
 
 # In[ ]:
 
