@@ -1341,7 +1341,7 @@ if not df.empty:
     variance = df['Log_Returns'].var()
     matexp = df['Log_Returns'].mean()
     # Set the number of trajectories
-    num_trajectories = 1000
+    num_trajectories = 300
 
     # Create a function to generate a trajectory
     def generate_trajectory(num_steps, initial_price, mu, sigma):
