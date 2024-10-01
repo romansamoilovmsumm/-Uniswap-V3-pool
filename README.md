@@ -1,5 +1,5 @@
 # Startegy Backtest in Uniswap V3 pool
-Репозиторий, посвященный моему проекту на курсе "Введение в блокчейн и распределенные финансы" от Веги
+This is a repository dedicated to the development and testing of liquidity placement strategies in uniswap v3
 
 В проекте требовалось выбрать Uniswap V3 pool, а затем написать стратегию и сделать её бектест на основании исторических данных.
 
